@@ -901,6 +901,10 @@ footer {
   }
 
   .tours__item .tours__text {
-    margin-top: 1.62%;
+    margin-top: 15.62%;
+  }
+
+  .form-help {
+    min-height: 550px;
   }
 }
