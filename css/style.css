@@ -218,13 +218,13 @@ body {
 .title {
   font-family: Oswald, sans-serif;
   font-weight: 600;
-  font-size: calc(40px + 8 * ((100vw - 320px) / 1046));
+  font-size: calc(25px + 23 * ((100vw - 320px) / 1046));
   line-height: 115%;
 }
 
 .text {
   font-weight: normal;
-  font-size: 18px;
+  font-size: calc(15px + 3 * ((100vw - 320px) / 1046));
   line-height: 150%;
 }
 
@@ -312,8 +312,7 @@ body {
 
 .tours__item {
   width: 370px;
-  min-height: 326px;
-  padding: 3.41%;
+  padding: 35px;
 }
 .tours__item .tours__geo {
   font-weight: normal;
@@ -342,11 +341,11 @@ body {
   font-style: normal;
   font-weight: 500;
   font-size: 26px;
-  margin-top: 47.24%;
+  margin-top: 135px;
 }
 .tours__item .tours__text {
-  margin-top: 8.62%;
-  line-height: 55%;
+  margin-top: 5.1%;
+  line-height: 100%;
 }
 .tours__item .tours__text span {
   height: 14px;
@@ -369,7 +368,7 @@ body {
 }
 
 .tours__item__1 {
-  background: linear-gradient(180deg, rgba(249, 249, 250, 0) 0%, rgba(249, 249, 250, 0.9) 100%), url("../image/tours_item.jpg") no-repeat center;
+  background: linear-gradient(180deg, rgba(249, 249, 250, 0) 0%, rgba(249, 249, 250, 0.9) 100%), url("../image/tours_item.jpg") center/cover no-repeat;
 }
 
 .tours__item__2 {
@@ -438,7 +437,7 @@ body {
 }
 .tours-list__table th {
   font-weight: normal;
-  font-size: 18px;
+  font-size: calc(14px + 4 * ((100vw - 320px) / 1046));
   padding: 15px 49.5px;
   color: #a7aeb4;
   text-align: left;
@@ -446,7 +445,7 @@ body {
 }
 .tours-list__table td {
   font-weight: 500;
-  font-size: 22px;
+  font-size: calc(14px + 8 * ((100vw - 320px) / 1046));
   padding: 25px 49.5px;
   border-bottom: 1px solid #45545e;
 }
@@ -490,6 +489,7 @@ body {
   min-height: 287px;
   max-width: 700px;
   background: url("../image/blog_image.jpg") no-repeat center;
+  background-size: cover;
   margin-bottom: 5%;
 }
 .blog__subtitle {
@@ -500,7 +500,7 @@ body {
 .blog__text {
   margin-top: 2.3%;
   font-weight: normal;
-  font-size: 16px;
+  font-size: calc(13px + 3 * ((100vw - 320px) / 1046));
   line-height: 150%;
   padding-right: 2.4%;
 }
@@ -522,7 +522,7 @@ body {
   border-bottom: 1px solid #061b28;
   padding: 5.5% 5.25% 5.5% 7.5%;
   font-weight: normal;
-  font-size: 18px;
+  font-size: calc(15px + 3 * ((100vw - 320px) / 1046));
   line-height: 140%;
 }
 .blog-news__item_active {
@@ -703,12 +703,9 @@ footer {
     margin-top: 30px;
   }
 
-  .tours-list__table {
-    width: 550px;
-  }
   .tours-list__table td,
 .tours-list__table th {
-    padding: 10px;
+    padding: 20px;
   }
   .tours-list__table td:first-of-type,
 .tours-list__table th:first-of-type {
@@ -721,7 +718,7 @@ footer {
   }
 
   .blog__title {
-    margin: 30px 0;
+    margin: 10px 0;
   }
 
   .form-help {
@@ -810,10 +807,6 @@ footer {
     margin-top: 8.27%;
   }
 
-  .tours-list__column {
-    overflow-x: scroll;
-  }
-
   .description {
     overflow-x: scroll;
   }
@@ -823,7 +816,7 @@ footer {
   }
 
   .blog__body {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
   }
 
@@ -841,9 +834,18 @@ footer {
     min-height: 500px;
   }
 
-  .tours-list__table {
-    width: 550px;
-    align-self: start;
+  .tours-list__table td,
+.tours-list__table th {
+    padding: 10px;
+  }
+  .tours-list__table td:first-of-type,
+.tours-list__table th:first-of-type {
+    padding-left: 5px;
+  }
+  .tours-list__table td:last-of-type,
+.tours-list__table th:last-of-type {
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
   .blog__title {
@@ -885,23 +887,55 @@ footer {
     align-items: flex-start;
   }
 
-  .tours__item {
-    max-width: 300px;
-  }
-
   .tours-list {
     min-height: 450px;
   }
 
-  .title {
-    text-align: left;
+  .tours__row .tours__item {
+    margin-right: 0;
+    flex-shrink: 0;
+    max-width: 105%;
   }
 
-  .tours__item .tours__text {
-    margin-top: 15.62%;
+  .form-help__content {
+    text-align: center;
   }
 
   .form-help {
-    min-height: 550px;
+    min-height: 530px;
+  }
+
+  .description .description__content {
+    max-width: 100%;
+  }
+
+  .description__title {
+    text-align: center;
+  }
+
+  .description__text {
+    line-height: 170%;
+  }
+
+  .blog__image {
+    min-height: 140px;
+  }
+
+  .blog__subtitle {
+    font-size: 20px;
+  }
+
+  .tours-list__table td,
+.tours-list__table th {
+    padding: 5 px;
+  }
+  .tours-list__table td:first-of-type,
+.tours-list__table th:first-of-type {
+    padding-left: 0px;
+  }
+  .tours-list__table td:last-of-type,
+.tours-list__table th:last-of-type {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
